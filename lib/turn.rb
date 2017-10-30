@@ -6,15 +6,6 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def valid_move?(board, index)
-  taken = position_taken?(board, index)
-  if ((index >= 0) && (index <= 8)) && (taken == false)
-    return true
-  else
-    return false
-  end
-end
-
 def position_taken?(board, index)
   if board[index] == "  "
     return false
@@ -24,6 +15,15 @@ def position_taken?(board, index)
     return false
   elsif (board[index] == "X") || (board[index] == "O")
     return true
+  end
+end
+
+def valid_move?(board, index)
+  taken = position_taken?(board, index)
+  if ((index >= 0) && (index <= 8)) && (taken == false)
+    return true
+  else
+    return false
   end
 end
 
