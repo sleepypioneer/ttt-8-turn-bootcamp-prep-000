@@ -39,7 +39,7 @@ def turn(board)
   if valid == true
     move(board, index)
     display_board(board)
-  elsif valid == false
+  elsif
     turn(board)
   end
 end
